@@ -1,9 +1,20 @@
 version: '3'
 
 services:
+  database:
+    build: ./database
+    image: wru_database
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASS: comsc
+      STARTUP_SQL: /tmp/WRUSchema.sql
+
   server:
     build: ./server
     image: wru_server
+    command: java -jar wru-project-0.0.1-SNAPSHOT.jar --spring.profiles.active=production
     ports:
-      - "8080:8080"
+      - 8080:8080
     container_name: wru_1

@@ -1,6 +1,7 @@
 FROM 		centos:7
 
 ENV		JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
+
 ENV		JRE_HOME /usr/lib/jvm/jre
 ENV		GRADLE_HOME /opt/gradle-2.14
 ENV		GRADLE_BIN $GRADLE_HOME/bin
@@ -26,5 +27,3 @@ RUN		cd $APP_HOME && \
 		gradle -q build
 
 WORKDIR		$APP_RUN
-
-CMD		["java","-jar", "wru-project-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=production"]
