@@ -1,4 +1,4 @@
-FROM 		centos
+FROM 		centos:7
 
 ENV		JAVA_HOME /usr/lib/jvm/jre-1.8.0-openjdk
 ENV		JRE_HOME /usr/lib/jvm/jre
