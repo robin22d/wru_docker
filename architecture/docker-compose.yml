@@ -10,6 +10,7 @@ services:
       MYSQL_USER: root
       MYSQL_PASS: comsc
       STARTUP_SQL: /tmp/WRUSchema.sql
+    container_name: wru_db
 
   server:
     build: ./server
