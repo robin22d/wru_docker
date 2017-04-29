@@ -1,0 +1,40 @@
+
+one_to_one
+==========
+
+cd one_to_one
+docker-compose up -d
+
+ _________________               ____________
+|                 |             |            |
+|  MYSQL DATABASE | <---------- | WRU_SERVER | <----------
+|_________________|             |____________|
+
+
+load_balancer
+=============
+
+cd load_balancer
+docker build -t wru_server server/. && docker-compose up -d
+
+
+                          ____________
+                         |            |
+                         | WRU_SERVER |
+                         |____________|
+                       /               \  
+                      /                 \
+                     /                   \
+ _________________  /                     \  _____________________
+|                 |                         |                     |
+|  MYSQL DATABASE |                         | NGINX LOAD BALANCER | <----------
+|_________________|                         |_____________________|
+                    \                    /
+                     \                  /
+                      \                /
+                       \              /
+                          ____________
+                         |            |
+                         | WRU_SERVER |
+                         |____________|
+
