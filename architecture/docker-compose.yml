@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  server:
+    build: ./server
+    image: wru_server
+    ports:
+      - "8080:8080/tcp"
+    container_name: wru_1
