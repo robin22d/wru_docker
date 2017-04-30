@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  jmeter_1:
+    image: wru_jmeter
+    command: jmeter -n -t WRUTest.jmx
+    networks:
+      - onetoone_default
+      - loadbalancer_default
+      - default
+    container_name: wru_jmeter_1
+
+  jmeter_2:
+    image: wru_jmeter
+    command: jmeter -n -t WRUTest.jmx
+    networks:
+      - onetoone_default
+      - loadbalancer_default
+      - default
+    container_name: wru_jmeter_2
+
+networks:
+  onetoone_default:
+    external: true
+  loadbalancer_default:
+    external: true
+
