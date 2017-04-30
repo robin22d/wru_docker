@@ -16,6 +16,10 @@ RUN		wget -q http://mirrors.ukfast.co.uk/sites/ftp.apache.org//jmeter/binaries/$
 
 RUN		mkdir $DATA
 ADD		WRUTest.jmx $DATA/WRUTest.jmx
+ADD		run.sh $DATA/run.sh
+RUN		chmod 755 $DATA/run.sh
 
 WORKDIR		$DATA
+
+CMD		./run.sh
 
