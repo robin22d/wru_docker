@@ -8,4 +8,4 @@ build:
 		docker build -t wru_jmeter jmeter/.
 
 compose:
-		docker compose up -d
+		docker-compose up -d
