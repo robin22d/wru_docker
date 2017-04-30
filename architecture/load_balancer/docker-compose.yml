@@ -41,9 +41,14 @@ services:
     container_name: wru_nginx
 
   jmeter:
-    build: ./jmeter
     image: wru_jmeter
     links:
       - nginx
-    container_name: wru_jmeter
+    container_name: wru_jmeter_1
+
+  jmeter:
+    image: wru_jmeter
+    links:
+      - nginx
+    container_name: wru_jmeter_2
 

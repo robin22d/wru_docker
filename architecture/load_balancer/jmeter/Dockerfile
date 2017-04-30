@@ -12,7 +12,7 @@ RUN		apt update && \
 		apt -y install wget openjdk-8-jre-headless
 
 RUN		wget -q http://mirrors.ukfast.co.uk/sites/ftp.apache.org//jmeter/binaries/$JMETER_VERSION.tgz -P /tmp && \
-		tar xvf /tmp/$JMETER_VERSION.tgz -C /usr/local
+		tar zxf /tmp/$JMETER_VERSION.tgz -C /usr/local
 
 RUN		mkdir $DATA
 ADD		WRUTest.jmx $DATA/WRUTest.jmx
