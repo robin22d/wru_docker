@@ -43,8 +43,6 @@ services:
   jmeter:
     build: ./jmeter
     image: wru_jmeter
-    environment:
-      JAVA_OPTS: -Xms512m -Xmx512m
     links:
       - nginx
     container_name: wru_jmeter
