@@ -1,4 +1,11 @@
 
+useful commands
+===============
+docker ps -a
+docker logs -f wru_1
+docker logs -f wru_2
+
+
 one_to_one
 ==========
 
