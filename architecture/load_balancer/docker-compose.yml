@@ -40,15 +40,3 @@ services:
       - 8081:8081
     container_name: wru_nginx
 
-  jmeter:
-    image: wru_jmeter
-    links:
-      - nginx
-    container_name: wru_jmeter_1
-
-  jmeter:
-    image: wru_jmeter
-    links:
-      - nginx
-    container_name: wru_jmeter_2
-

@@ -5,7 +5,6 @@ clean:
 
 build:
 		docker build -t wru_server server/.
-		docker build -t wru_jmeter jmeter/.
 
 compose:
 		docker-compose up -d
