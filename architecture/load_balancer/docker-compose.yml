@@ -33,6 +33,7 @@ services:
   nginx:
     build: ./nginx
     image: wru_nginx
+    privileged: true
     links:
       - server_1
       - server_2
